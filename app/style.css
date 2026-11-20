@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Anton';
+  src: url('./fonts/Anton-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+html, body { margin: 0; min-height: 100%; background: #17102a; color: #f4eefc; font: 15px/1.45 system-ui, sans-serif; }
+.app { display: flex; gap: 28px; align-items: flex-start; justify-content: center; padding: 24px; box-sizing: border-box; }
+.controls { display: flex; flex-direction: column; gap: 13px; width: 300px; flex: none; padding: 20px; background: #221640; border: 1px solid #3a2566; border-radius: 12px; box-sizing: border-box; }
+.controls h1 { margin: 0; font-family: Anton, sans-serif; font-size: 34px; letter-spacing: 2px; color: #ffb347; text-transform: uppercase; }
+.tagline { margin: 0; color: #c9b8e8; }
+label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; }
+input[type=text], select { font: inherit; padding: 9px; border: 1px solid #4a3480; border-radius: 6px; background: #17102a; color: #f4eefc; }
+input[type=file] { font: inherit; }
+input[type=range] { accent-color: #ff2e88; }
+button { font: inherit; font-weight: 700; padding: 11px; border: 0; border-radius: 6px; background: #2c1c52; color: #f4eefc; cursor: pointer; }
+button.primary { background: linear-gradient(90deg, #ff2e88, #ff6b4a); color: #fff; }
+button:hover { filter: brightness(1.15); }
+.hint { margin: 0; color: #a894d4; font-size: 13px; }
+#status { margin: 0; min-height: 1.2em; color: #22e6ff; font-size: 13px; }
+canvas { width: min(72vh, 62vw); height: auto; aspect-ratio: attr(width) / attr(height); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55); border-radius: 4px; }
+body.shot-cover { background: #000; }
+body.shot-cover .controls { display: none; }
+body.shot-cover .app { padding: 0; }
+body.shot-cover canvas { width: 100vw; height: 100vh; object-fit: contain; box-shadow: none; border-radius: 0; }
